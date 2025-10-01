@@ -1,0 +1,130 @@
+{
+    "metadata": {
+      "name": "Modern & Friendly UI Style",
+      "description": "A design system based on a modern mood tracker app UI. Ideal for a clean, professional, and friendly personal portfolio for a developer. It features a light theme, rounded corners, and a vibrant yet clean color palette.",
+      "version": "1.0.0"
+    },
+    "palette": {
+      "primary": {
+        "main": "#5D5FEF",
+        "description": "Used for main call-to-action buttons, icons, and important highlights."
+      },
+      "secondary": {
+        "darkBlue": "#3A4E9B",
+        "lightBlue": "#A9D5FF",
+        "description": "Used for secondary information, charts, and accents."
+      },
+      "background": {
+        "default": "#F7F7FD",
+        "paper": "#FFFFFF",
+        "description": "Default is the main page background, paper is for cards and modals."
+      },
+      "text": {
+        "primary": "#1A1A2E",
+        "secondary": "#6E7191",
+        "disabled": "#A0A3BD",
+        "description": "Primary for headings and main text, secondary for less important details."
+      },
+      "charts": {
+        "green": "#6DD4A4",
+        "orange": "#FABD7A",
+        "red": "#F88A8A",
+        "blue": "#84B6F4",
+        "description": "A friendly palette for data visualizations like bar charts."
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, Poppins, sans-serif",
+      "headings": {
+        "h1": {
+          "fontSize": "2.5rem",
+          "fontWeight": 700,
+          "lineHeight": 1.2,
+          "color": "palette.text.primary"
+        },
+        "h2": {
+          "fontSize": "1.75rem",
+          "fontWeight": 600,
+          "lineHeight": 1.3,
+          "color": "palette.text.primary"
+        },
+        "h3": {
+          "fontSize": "1.25rem",
+          "fontWeight": 600,
+          "lineHeight": 1.4,
+          "color": "palette.text.primary"
+        }
+      },
+      "body": {
+        "fontSize": "1rem",
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "color": "palette.text.secondary"
+      },
+      "caption": {
+        "fontSize": "0.875rem",
+        "fontWeight": 400,
+        "color": "palette.text.disabled"
+      }
+    },
+    "layout": {
+      "spacingUnit": 8,
+      "borderRadius": "16px",
+      "containerMaxWidth": "1200px"
+    },
+    "components": {
+      "card": {
+        "backgroundColor": "palette.background.paper",
+        "borderRadius": "layout.borderRadius",
+        "padding": "24px",
+        "boxShadow": "0px 10px 30px rgba(26, 26, 46, 0.05)",
+        "border": "1px solid #EAEAF5"
+      },
+      "button": {
+        "primary": {
+          "backgroundColor": "palette.primary.main",
+          "color": "palette.background.paper",
+          "borderRadius": "12px",
+          "padding": "12px 24px",
+          "fontWeight": 600,
+          "border": "none",
+          "boxShadow": "0px 4px 15px rgba(93, 95, 239, 0.3)",
+          "hover": {
+            "transform": "scale(1.03)",
+            "boxShadow": "0px 6px 20px rgba(93, 95, 239, 0.4)"
+          }
+        }
+      },
+      "modal": {
+        "backdropColor": "rgba(26, 26, 46, 0.4)",
+        "content": {
+          "$ref": "components.card",
+          "minWidth": "400px",
+          "maxWidth": "500px"
+        }
+      },
+      "formElements": {
+        "input": {
+          "border": "1px solid #D9DBE9",
+          "borderRadius": "8px",
+          "padding": "10px 14px",
+          "backgroundColor": "palette.background.default"
+        },
+        "radio": {
+          "borderColor": "palette.primary.main",
+          "checkedBackgroundColor": "palette.primary.main"
+        }
+      }
+    },
+    "visuals": {
+      "iconStyle": "linear",
+      "iconSize": "24px",
+      "decorativeElements": {
+        "enabled": true,
+        "styles": ["dotted grids", "subtle wavy lines"],
+        "color": "palette.secondary.lightBlue",
+        "opacity": 0.3
+      }
+    }
+  }
+  
