@@ -549,6 +549,10 @@ export default function AI() {
       })
     );
 
+    if (!import.meta.env.VITE_OPENROUTER_API_KEY) {
+      throw new Error('OpenRouter API key not set. Please add VITE_OPENROUTER_API_KEY to your .env file.');
+    }
+
     const options = {
       method: 'POST',
       headers: {
