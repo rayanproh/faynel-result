@@ -1,0 +1,202 @@
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import { useTranslation } from 'react-i18next';
+
+import { useSimulation } from './hooks/useSimulation';
+import { Header } from './components/Header';
+import { CanvasGrid } from './components/CanvasGrid';
+import { ControlsPanel } from './components/ControlsPanel';
+import { EnvironmentSelector } from './components/EnvironmentSelector';
+import { InfoBoxes } from './components/InfoBoxes';
+import { Readouts } from './components/Readouts';
+
+function App() {
+  console.log('App component rendering...');
+  
+  const { i18n, t } = useTranslation();
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [mass, setMass] = useState(70);
+  const [gravity, setGravity] = useState(9.8);
+  const [showCurve, setShowCurve] = useState(true);
+  const [showForces, setShowForces] = useState(false);
+  const [showMotion, setShowMotion] = useState(true);
+
+  // Debug info effect
+  useEffect(() => {
+    console.log('App mounted with state:', {
+      mass,
+      gravity,
+      showCurve,
+      showForces,
+      showMotion,
+      i18n: {
+        language: i18n.language,
+        dir: i18n.dir()
+      }
+    });
+    setLoading(false);
+  }, []);
+
+  // Error boundary effect
+  useEffect(() => {
+    const handleError = (error) => {
+      console.error('App Error:', error);
+      setError(error);
+    };
+    
+    window.addEventListener('error', handleError);
+    return () => window.removeEventListener('error', handleError);
+  }, []);
+  
+  const initialPosition = { x: 400, y: 100 };
+  const {
+    state,
+    drop,
+    pause,
+    reset,
+    isRunning
+  } = useSimulation({
+    mass,
+    gravity,
+    initialPosition
+  });
+
+  const handleMassChange = (newMass) => {
+    setMass(newMass);
+  };
+
+  const handleGravityChange = (newGravity) => {
+    setGravity(newGravity);
+  };
+
+  const handleEnvironmentChange = (newGravity) => {
+    setGravity(newGravity);
+    if (isRunning) {
+      reset();
+    }
+  };
+
+  const handleToggleDisplay = (type, value) => {
+    switch (type) {
+      case 'curve':
+        setShowCurve(value);
+        break;
+      case 'forces':
+        setShowForces(value);
+        break;
+      case 'motion':
+        setShowMotion(value);
+        break;
+    }
+  };
+
+  const handleUpdateCurve = () => {
+    // Trigger a re-render of the curve
+    setShowCurve(false);
+    setTimeout(() => setShowCurve(true), 100);
+  };
+
+  const handleDrop = () => {
+    if (isRunning) {
+      pause();
+    } else {
+      drop();
+    }
+  };
+
+  useEffect(() => {
+    // Set RTL direction and language for Arabic
+    document.documentElement.dir = i18n.dir();
+    document.documentElement.lang = i18n.language;
+  }, [i18n]);
+
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background p-4 flex items-center justify-center">
+        <div className="text-foreground">جاري التحميل...</div>
+      </div>
+    );
+  }
+
+  // If there's an error, show it
+  if (error) {
+    return (
+      <div className="min-h-screen bg-background p-4 flex items-center justify-center">
+        <div className="bg-destructive/10 border border-destructive text-destructive px-4 py-3 rounded relative" role="alert">
+          <strong className="font-bold">خطأ! </strong>
+          <span className="block sm:inline">{error.message}</span>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="mt-4 px-4 py-2 bg-destructive text-destructive-foreground rounded hover:bg-destructive/90"
+          >
+            إعادة تحميل
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Wrap the main content in an error boundary
+  return (
+    <div className="min-h-screen bg-background p-4 lg:p-8">
+      <div className="max-w-7xl mx-auto space-y-6">
+        {/* Debug info - remove in production */}
+        <div className="fixed top-0 left-0 bg-black/50 text-white text-xs p-2 z-50">
+          Mass: {mass}, Gravity: {gravity}, Running: {isRunning ? 'yes' : 'no'}
+        </div>
+        
+        <Header />
+        
+        <div className="grid lg:grid-cols-12 gap-6">
+          <div className="lg:col-span-8 space-y-6">
+            <CanvasGrid
+              mass={mass}
+              gravity={gravity}
+              showCurve={showCurve}
+              showForces={showForces}
+              showMotion={showMotion}
+              size={30}
+              position={state.position}
+              velocity={state.velocity}
+            />
+            
+            <InfoBoxes />
+          </div>
+          
+          <div className="lg:col-span-4 space-y-6">
+            <ControlsPanel
+              mass={mass}
+              gravity={gravity}
+              isRunning={isRunning}
+              showCurve={showCurve}
+              showForces={showForces}
+              showMotion={showMotion}
+              onMassChange={handleMassChange}
+              onGravityChange={handleGravityChange}
+              onDrop={handleDrop}
+              onReset={reset}
+              onToggleDisplay={handleToggleDisplay}
+              onUpdateCurve={handleUpdateCurve}
+            />
+            
+            <EnvironmentSelector
+              onEnvironmentChange={handleEnvironmentChange}
+              currentGravity={gravity}
+            />
+            
+            <Readouts
+              force={state.force.y}
+              acceleration={state.acceleration.y}
+              velocity={state.velocity.y}
+              distance={state.position.y - initialPosition.y}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,480 @@
+/* =============================================
+   GENERAL CHAT WINDOW — ETHREAL DARK THEME
+   ============================================= */
+.chatbot-window-page {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(62, 62, 62, 0.4);
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #121212;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(155, 108, 206, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+  position: relative;
+}
+
+/* =============================================
+   MESSAGES AREA — AIRY AND SCROLLABLE
+   ============================================= */
+.chatbot-messages {
+  flex: 1;
+  min-height: 0; /* Fix for flexbox scrolling issue */
+  padding: 24px 24px 96px; /* Increased bottom padding to allow more scrolling */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #121212;
+}
+
+.chatbot-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* =============================================
+   INDIVIDUAL MESSAGE BUBBLES — MODERN SHAPE & DEPTH
+   ============================================= */
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 85%;
+  padding: 14px 18px;
+  border-radius: 18px;
+  font-size: 1rem;
+  line-height: 1.7;
+  word-wrap: break-word;
+  animation: fadeInUp 0.3s ease-out;
+  position: relative;
+  text-align: start;
+  direction: inherit;
+  unicode-bidi: plaintext;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User Message — Stealth Dark, Glowing Edge (RTL Fix) */
+.chat-message.user {
+  background-color: #2d2d2d;
+  color: #f5f5f5;
+  align-self: flex-start; /* Move user messages to the left */
+  border-bottom-left-radius: 5px; /* Adjust speech bubble corner */
+  box-shadow: 0 2px 8px rgba(51, 51, 51, 0.4);
+  border: 1px solid rgba(155, 108, 206, 0.1);
+  direction: rtl; /* Set text direction for Arabic */
+}
+
+/* Bot Message — Gradient with Subtle Inner Glow (RTL Fix) */
+.chat-message.bot {
+  background: linear-gradient(140deg, #6a7fd7, #a382ee);
+  color: white;
+  margin-left: auto; /* Align to the right, more stable for RTL text */
+  border-bottom-right-radius: 5px; /* Adjust speech bubble corner */
+  box-shadow: 
+    0 4px 15px rgba(95, 114, 190, 0.3),
+    inset 0 1px 3px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  direction: rtl; /* Set text direction for Arabic */
+  flex-direction: row-reverse; /* Keep avatar on the left for RTL */
+}
+
+/* Message Content — Enhanced Typography */
+.chat-message p,
+.chat-message span {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Avatar Styles — Flat Design with Soft Shadow */
+.chat-message .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-message.user .avatar {
+  background: linear-gradient(135deg, #9b6cce, #7c5bbd);
+  border-color: rgba(155, 108, 206, 0.3);
+}
+
+.chat-message.bot .avatar {
+  background: linear-gradient(135deg, #5f72be, #7e6dc4);
+  border-color: rgba(95, 114, 190, 0.4);
+}
+
+/* Support for image avatars (optional) */
+.chat-message .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* =============================================
+   INPUT AREA — INSULATED, SEAMLESS, PRECISE
+   ============================================= */
+.chatbot-input {
+  display: flex;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(62, 62, 62, 0.4);
+  background-color: #1a1a1a;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 24px;
+  background-color: #252525;
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: 
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(155, 108, 206, 0.1);
+}
+
+.chatbot-input input:focus {
+  background-color: #2d2d2d;
+  box-shadow: 
+    inset 0 0 0 2px #9b6cce,
+    0 6px 16px rgba(95, 114, 190, 0.2);
+  transform: translateY(-1px);
+}
+
+.chatbot-input button {
+  background: linear-gradient(135deg, #5f72be, #9b6cce);
+  color: white;
+  border: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: 
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease;
+  box-shadow: 0 3px 10px rgba(95, 114, 190, 0.3);
+}
+
+.chatbot-input button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(95, 114, 190, 0.4);
+}
+
+.chatbot-input button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.chatbot-input button:disabled {
+  background: #3a3a3a;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 0 transparent;
+  opacity: 0.6;
+}
+
+/* =============================================
+   RTL/LTR AWARE ALIGNMENT — SMART LAYOUT
+   ============================================= */
+/* Default logical layout using document direction on the window container */
+.chatbot-window-page[dir="rtl"] .chat-message {
+  text-align: right;
+  direction: rtl;
+}
+
+.chatbot-window-page[dir="ltr"] .chat-message {
+  text-align: left;
+  direction: ltr;
+}
+
+/* Align user/bot bubbles based on direction without changing markup */
+.chatbot-window-page[dir="rtl"] .chat-message.user {
+  margin-left: auto;
+  align-self: flex-end;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 5px;
+}
+
+.chatbot-window-page[dir="rtl"] .chat-message.bot {
+  margin-right: auto;
+  align-self: flex-start;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 5px;
+}
+
+.chatbot-window-page[dir="ltr"] .chat-message.user {
+  margin-left: auto;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 18px;
+}
+
+.chatbot-window-page[dir="ltr"] .chat-message.bot {
+  margin-right: auto;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 18px;
+}
+
+/* =============================================
+   BUBBLE TAILS — SUBTLE POINTERS
+   ============================================= */
+.chat-message.user::after,
+.chat-message.bot::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 10px;
+  height: 10px;
+  background: currentColor;
+  filter: brightness(0.8);
+  opacity: 0.25;
+  transform: rotate(45deg);
+}
+
+.chatbot-window-page[dir="rtl"] .chat-message.user::after { right: 14px; }
+.chatbot-window-page[dir="rtl"] .chat-message.bot::after { left: 14px; }
+.chatbot-window-page[dir="ltr"] .chat-message.user::after { right: 14px; }
+.chatbot-window-page[dir="ltr"] .chat-message.bot::after { left: 14px; }
+
+/* =============================================
+   ENTRANCE FX — POP AND SLIDE
+   ============================================= */
+.chat-message.pop-in {
+  animation: popIn 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(10px) scale(0.98); }
+  60% { opacity: 1; transform: translateY(0) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* Subtle shimmer for bot replies */
+.chat-message.bot.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.chat-message.bot.shimmer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.08) 40%, transparent 60%);
+  transform: translateX(-100%);
+  animation: shimmerMove 1.4s ease-out 0.2s 1 forwards;
+}
+@keyframes shimmerMove {
+  to { transform: translateX(100%); }
+}
+
+/* =============================================
+   TYPING INDICATOR — INTUITIVE, POLISHED
+   ============================================= */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  margin: 0 24px;
+  opacity: 0.9;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  background-color: #666;
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-6px); opacity: 1; }
+}
+
+/* =============================================
+   STREAMING BLINKING CURSOR — IMMERSIVE
+   ============================================= */
+.blinking-cursor {
+  display: inline-block;
+  width: 5px;
+  height: 1.2em;
+  margin-left: 4px;
+  vertical-align: middle;
+  background-color: #9b6cce;
+  animation: blink 1.3s step-end infinite;
+  border-radius: 2px;
+}
+
+@keyframes blink {
+  0%, 75% { opacity: 1; }
+  76%, 100% { opacity: 0; }
+}
+
+/* =============================================
+   MESSAGE CONTENT — MARKDOWN & RICH TEXT
+   ============================================= */
+.chat-message a {
+  color: #a5b4fc;
+  text-decoration: underline;
+}
+
+.chat-message code {
+  background: rgba(255,255,255,0.06);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.chat-message pre {
+  background: rgba(255,255,255,0.06);
+  padding: 12px 14px;
+  border-radius: 12px;
+  overflow: auto;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.chat-message ul,
+.chat-message ol {
+  margin: 8px 0 0 1.25em;
+}
+
+/* Optional timestamp or meta line */
+.message-meta {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* =============================================
+   MOBILE RESPONSIVENESS — SUITABLE FOR ALL DEVICES
+   ============================================= */
+@media (max-width: 768px) {
+  .chatbot-window-page {
+    height: 80vh;
+    border-radius: 14px;
+  }
+
+  .chatbot-messages {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .chat-message {
+    max-width: 90%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .chatbot-input {
+    padding: 12px 16px;
+  }
+
+  .chatbot-input input {
+    padding: 12px 16px;
+  }
+
+  .chatbot-input button {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+}
+
+/* =============================================
+   REDUCED MOTION — RESPECT USER PREFERENCES
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =============================================
+   ACCESSIBILITY — CONTRAST + FOCUS
+   ============================================= */
+.chat-message:focus-visible {
+  outline: 2px solid #9b6cce;
+  outline-offset: 2px;
+}
+
+/* Optional: modern scroll-behavior for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =============================================
+   ADDITIONAL PRO TIP — FOR IMAGINARY TOOLBAR ICONS
+   =============================================
+   If you later add a toolbar with icons (e.g., attach, send, voice), use:
+   .action-icon {
+     width: 20px;
+     height: 20px;
+     fill: currentColor;
+   }
+   */
+

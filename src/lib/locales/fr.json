@@ -1,0 +1,294 @@
+{
+  "home": "Accueil",
+  "facts": "Faits Amusants",
+  "explanation": "Explication",
+  "simulation": "Simulation",
+  "tutor_nav": "Tuteur",
+  "presentation": "Présentation",
+  "main_title": "Théorie de la Relativité Générale",
+  "subtitle": "Voyage interactif dans le monde d'Einstein",
+  "simulation_title": "Simulation Interactive de l'Espace-temps",
+  "simulation_subtitle": "Contrôlez la masse et le temps et observez leur effet sur la courbure de l'espace-temps",
+  "tutor_title": "Tuteur de Physique",
+  "tutor_subtitle": "Posez n'importe quelle question de physique à Rayan",
+  "footer_text": "Site éducatif interactif sur la théorie de la relativité générale - Conçu pour les étudiants curieux",
+  "footer_copyright": "© {{year}} - Tous droits réservés",
+  "home.hero.title": "Bienvenue dans le monde de la relativité générale!",
+  "home.hero.subtitle": "Découvrez les secrets de l'univers avec Albert Einstein",
+  "home.hero.description": "Un voyage interactif fascinant pour comprendre comment fonctionnent la gravité et l'espace-temps. Conçu spécialement pour les étudiants curieux!",
+  "home.features.0.title": "Simulation 3D",
+  "home.features.0.description": "Regardez l'espace-temps se courber devant vos yeux avec des animations époustouflantes",
+  "home.features.0.action": "Essayer la simulation",
+  "home.features.1.title": "Explication simple étape par étape",
+  "home.features.1.description": "Apprenez pourquoi les objets tombent vers la Terre de manière facile et amusante",
+  "home.features.1.action": "Commencer l'apprentissage",
+  "home.features.2.title": "Faits étonnants",
+  "home.features.2.description": "Découvrez comment la relativité affecte votre vie quotidienne et ses applications fascinantes",
+  "home.features.2.action": "Découvrir les faits",
+  "home.quickStart.title": "Commencez votre voyage maintenant!",
+  "home.quickStart.steps": [
+    "Regardez la simulation interactive",
+    "Apprenez l'explication étape par étape",
+    "Découvrez les faits étonnants",
+    "Essayez de contrôler les paramètres"
+  ],
+  "home.aboutEinstein.title": "À propos d'Albert Einstein",
+  "home.aboutEinstein.description": "Un physicien génial qui a changé notre compréhension de l'univers. Il a développé la théorie de la relativité générale en 1915 et a montré que la gravité n'est pas une force, mais une courbure dans l'espace-temps!",
+  "home.aboutEinstein.facts": [
+    "Né en Allemagne en 1879",
+    "Prix Nobel en 1921",
+    "Sa théorie a changé la physique pour toujours"
+  ],
+  "home.interactivePreview.title": "Aperçu interactif",
+  "home.interactivePreview.subtitle": "Courbure de l'espace-temps autour de la Terre",
+  "home.interactivePreview.action": "Essayer la simulation complète",
+  "falling_sim.title": "Pourquoi les objets tombent-ils? – Comprendre la gravité",
+  "falling_sim.subtitle": "Découvrez la vraie raison de la chute des objets sur Terre grâce à la théorie révolutionnaire d'Einstein",
+  "falling_sim.central_desc": "Grille de coordonnées",
+  "falling_sim.controls_title": "Contrôles",
+  "falling_sim.mass_slider": "Masse de l'objet",
+  "falling_sim.gravity_slider": "Force de gravité",
+  "falling_sim.env_placeholder": "Choisissez un environnement",
+  "falling_sim.env_earth": "Terre",
+  "falling_sim.env_moon": "Lune",
+  "falling_sim.env_mars": "Mars",
+  "falling_sim.env_space": "Espace (pas de gravité)",
+  "falling_sim.drop_button": "Laisser tomber l'objet",
+  "falling_sim.usage_title": "Comment utiliser la page",
+  "falling_sim.usage_step1": "Ajustez la masse et la force de gravité",
+  "falling_sim.usage_step2": "Choisissez l'environnement",
+  "falling_sim.usage_step3": "Appuyez sur 'Laisser tomber l'objet'",
+  "falling_sim.usage_step4": "Observez le mouvement et la vitesse",
+  "falling_sim.concepts_title": "Concepts scientifiques",
+  "falling_sim.concept1_title": "Masse et chute libre",
+  "falling_sim.concept1_desc": "Le temps de chute d'un objet ne dépend pas de sa masse (en négligeant la résistance de l'air).",
+  "falling_sim.concept2_title": "Effet de la gravité",
+  "falling_sim.concept2_desc": "Plus la force de gravité (g) est grande, plus l'accélération de l'objet est grande.",
+  "falling_sim.concept3_title": "Loi physique",
+  "falling_sim.concept3_desc": "La force (F) agissant sur un objet est égale à sa masse (m) multipliée par l'accélération de la pesanteur (g).",
+  "falling_sim.info1": "Cette célèbre équation d'Einstein nous dit que l'énergie et la masse sont deux faces d'une même pièce.",
+  "falling_sim.info2_title": "La masse déforme l'espace-temps",
+  "falling_sim.info2_desc": "Dans la théorie de la relativité générale, la masse 'déforme' le tissu de l'espace-temps, et les autres objets suivent cette courbure.",
+  "falling_sim.conclusion_title": "Soyez le scientifique!",
+  "falling_sim.conclusion_desc": "N'hésitez pas à modifier les paramètres, à essayer différents environnements et à observer comment chaque valeur affecte le résultat.",
+  "falling_sim.link1": "Simulation d'orbites planétaires",
+  "falling_sim.link2": "Article sur la relativité générale",
+  "mass": "Masse",
+  "height": "Hauteur",
+  "fall_time": "Temps de chute",
+  "mass_kg": "Masse de l'objet (kg)",
+  "initial_height_m": "Hauteur initiale (m)",
+  "restart": "Redémarrer",
+  "slow_motion": "Ralenti",
+  "show_physics": "Afficher la physique",
+  "reset": "Réinitialiser",
+  "gravity_law": "Loi de la gravitation",
+  "gravity_law_desc": "La force d'attraction est inversement proportionnelle au carré de la distance",
+  "motion_equations": "Équations du mouvement",
+  "motion_equations_desc": "Vitesse et distance en chute libre",
+  "energy": "Énergie",
+  "energy_desc": "Conversion de l'énergie potentielle en énergie cinétique",
+  "facts.title": "Faits étonnants sur la relativité générale",
+  "facts.subtitle": "Découvrez les secrets fascinants de la théorie d'Einstein",
+  "facts.list_title": "Faits étonnants",
+  "facts.selected": "Sélectionné",
+  "facts.did_you_know": "Le saviez-vous?",
+  "facts.gps_accuracy_without": "Précision GPS sans relativité:",
+  "facts.gps_error": "Erreur 10 km",
+  "facts.gps_accuracy_with": "Précision GPS avec relativité:",
+  "facts.gps_accurate": "Précis",
+  "facts.time_difference": "Le temps au sommet de l'Everest est plus rapide de 0.00000003 seconde par jour",
+  "facts.facts": [
+    {
+      "id": "gps",
+      "title": "Système GPS",
+      "description": "Saviez-vous que votre téléphone utilise la relativité générale chaque jour? Les satellites GPS doivent corriger le temps à cause de la gravité!",
+      "detail": "Sans les corrections de la relativité générale, le GPS serait faux d'environ 10 kilomètres chaque jour!",
+      "color": "bg-blue-500"
+    },
+    {
+      "id": "time",
+      "title": "Le temps ralentit",
+      "description": "Plus vous vous rapprochez d'un objet lourd, plus le temps ralentit! Au sommet de l'Everest, les secondes passent légèrement plus vite qu'au niveau de la mer.",
+      "detail": "La différence est très petite - environ 0.00000003 seconde par jour - mais elle est réelle!",
+      "color": "bg-purple-500"
+    },
+    {
+      "id": "einstein",
+      "title": "Einstein le génie",
+      "description": "Albert Einstein a développé cette théorie quand il n'avait que 36 ans! Elle a complètement changé notre compréhension de l'univers.",
+      "detail": "Einstein a reçu le prix Nobel, mais pas pour la relativité générale - pour l'effet photoélectrique!",
+      "color": "bg-yellow-500"
+    },
+    {
+      "id": "blackhole",
+      "title": "Trous noirs",
+      "description": "La théorie d'Einstein a prédit l'existence des trous noirs des décennies avant qu'on les découvre! Ce sont des endroits où l'espace-temps se courbe extrêmement.",
+      "detail": "La première photo d'un trou noir a été prise en 2019 - 104 ans après la théorie d'Einstein!",
+      "color": "bg-black"
+    },
+    {
+      "id": "waves",
+      "title": "Ondes gravitationnelles",
+      "description": "Quand des étoiles géantes entrent en collision, elles créent des \"ondulations\" dans l'espace-temps lui-même! Nous les avons finalement découvertes en 2015.",
+      "detail": "Ces ondes sont incroyablement petites - plus petites que 1/10000 de la largeur d'un proton!",
+      "color": "bg-green-500"
+    },
+    {
+      "id": "universe",
+      "title": "L'univers s'étend",
+      "description": "La théorie d'Einstein a montré que l'univers ne peut pas être statique - il doit soit s'étendre soit se contracter. Nous avons découvert qu'il s'étend!",
+      "detail": "Einstein au début n'y croyait pas et a ajouté une \"constante cosmologique\" à ses équations, mais il l'a regretté plus tard!",
+      "color": "bg-red-500"
+    },
+    {
+      "id": "eclipse",
+      "title": "L'éclipse qui a donné raison à Einstein",
+      "description": "En 1919, une éclipse solaire totale a permis aux astronomes de voir des étoiles près du soleil. La lumière des étoiles a été courbée par la gravité du soleil, exactement comme la théorie d'Einstein l'avait prédit.",
+      "detail": "Cette expérience, dirigée par Sir Arthur Eddington, a été la première preuve majeure de la relativité générale et a rendu Einstein célèbre dans le monde entier.",
+      "color": "bg-orange-500"
+    },
+    {
+      "id": "lensing",
+      "title": "Télescopes cosmiques",
+      "description": "Les objets massifs comme les galaxies peuvent courber la lumière à tel point qu'ils agissent comme des loupes géantes, un phénomène appelé lentille gravitationnelle.",
+      "detail": "Cela permet aux astronomes de voir des galaxies extrêmement lointaines qui seraient autrement trop faibles pour être observées. C'est comme avoir un télescope naturel dans l'espace!",
+      "color": "bg-teal-500"
+    }
+  ],
+  "facts.applications": {
+    "title": "Où l'utilisons-nous dans notre vie?",
+    "items": [
+      {
+        "name": "Système GPS",
+        "description": "Localisation précise"
+      },
+      {
+        "name": "Médecine nucléaire",
+        "description": "Traitement du cancer"
+      },
+      {
+        "name": "Énergie nucléaire",
+        "description": "Production d'électricité"
+      },
+      {
+        "name": "Astronomie",
+        "description": "Comprendre les étoiles et les galaxies"
+      }
+    ]
+  },
+  "welcome": {
+    "title": "Bienvenue sur notre simulation de la relativité générale",
+    "madeBy": "Ce site a été créé par : Rayan Rchouki",
+    "class": "Classe : TCS-4",
+    "school": "Lycée : Aourir",
+    "close": "Explorer maintenant"
+  },
+  "chatbot_title": "Tuteur de Physique",
+  "chatbot_placeholder": "Posez une question de physique...",
+  "welcome_message": "Bonjour! Je suis Rayan. Comment puis-je vous aider en physique aujourd'hui?",
+  "video_explanation": "Vidéo Explicative",
+  "video_explanation_title": "Explication Vidéo",
+  "explanation_section": {
+    "subtitle": "Découvrez la théorie de la relativité générale d'Einstein d'une manière interactive et facile à comprendre",
+    "tabs": {
+      "basics": "Concepts de base",
+      "simulation": "Simulation interactive",
+      "video": "Vidéo explicative",
+      "applications": "Applications pratiques"
+    },
+    "key_points": "Points clés:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "concepts": [
+      {
+        "title": "Introduction à la relativité générale",
+        "content": "La théorie de la relativité générale est une théorie physique publiée par Albert Einstein en 1915. Cette théorie explique la gravité non pas comme une force, mais comme une conséquence de la courbure de l'espace-temps (la combinaison de l'espace et du temps) par la masse et l'énergie.",
+        "keyPoints": [
+          "La gravité n'est pas une force mais une courbure de l'espace-temps",
+          "Plus un objet est massif, plus il courbe l'espace-temps autour de lui",
+          "Les objets se déplacent en ligne droite dans un espace-temps courbe"
+        ]
+      },
+      {
+        "title": "L'espace-temps",
+        "content": "L'espace-temps est le concept qui fusionne les trois dimensions spatiales et la dimension temporelle en un univers à quatre dimensions. Imaginez un filet en caoutchouc, lorsque vous placez une balle lourde dessus, le filet se courbe. C'est ainsi que la matière et l'énergie courbent l'espace-temps.",
+        "keyPoints": [
+          "L'espace-temps est le tissu quadridimensionnel de l'univers",
+          "La masse et l'énergie déforment le tissu de l'espace-temps",
+          "Les objets suivent les chemins les plus courts dans un espace-temps courbe"
+        ]
+      },
+      {
+        "title": "Courbure de la lumière",
+        "content": "La théorie de la relativité générale a prédit que la lumière se courbe lorsqu'elle passe près d'objets massifs. Cette prédiction a été confirmée lors de l'éclipse solaire de 1919, lorsque la courbure de la lumière des étoiles lointaines passant près du Soleil a été observée.",
+        "keyPoints": [
+          "La lumière suit la courbure de l'espace-temps",
+          "La courbure de la lumière a été observée pour la première fois en 1919",
+          "Ce phénomène est appelé lentille gravitationnelle"
+        ]
+      },
+      {
+        "title": "Trous noirs",
+        "content": "Les trous noirs sont des régions de l'espace où la gravité est si forte que rien ne peut s'en échapper, pas même la lumière. Ils se forment lorsque des étoiles massives s'effondrent sous leur propre gravité.",
+        "keyPoints": [
+          "Les trous noirs sont des endroits où l'espace-temps est extrêmement courbé",
+          "L'horizon des événements est le point de non-retour pour la lumière",
+          "La première image d'un trou noir a été capturée en 2019"
+        ]
+      },
+      {
+        "title": "Dilatation du temps",
+        "content": "La relativité générale a prédit que le temps passe plus lentement dans les champs gravitationnels forts. Cela signifie qu'une horloge à la surface de la Terre tourne légèrement plus lentement qu'une horloge dans l'espace. Cet effet est faible mais réel et important pour des systèmes comme le GPS.",
+        "keyPoints": [
+          "Le temps ralentit dans les champs gravitationnels forts",
+          "Cet effet est essentiel au fonctionnement des systèmes de navigation GPS",
+          "La différence de temps est faible mais mesurable"
+        ]
+      },
+      {
+        "title": "Preuves expérimentales",
+        "content": "La théorie de la relativité générale a été confirmée par de nombreuses expériences et observations. Parmi les plus importantes : la courbure de la lumière des étoiles lors de l'éclipse solaire de 1919, la précession de l'orbite de Mercure et la détection des ondes gravitationnelles en 2015.",
+        "keyPoints": [
+          "L'éclipse solaire de 1919 a fourni la première preuve solide",
+          "Les ondes gravitationnelles ont été détectées en 2015",
+          "Le système GPS repose sur des corrections de la relativité générale"
+        ]
+      }
+    ],
+    "applications": {
+        "gps_title": "Système de positionnement mondial (GPS)",
+        "gps_content": "Le GPS est l'une des applications pratiques les plus importantes de la relativité générale. Sans les corrections relativistes, le système serait imprécis d'environ 10 kilomètres par jour.",
+        "gps_how": "Comment ça marche?",
+        "gps_points": [
+            "Les satellites tournent autour de la Terre à grande vitesse",
+            "Les horloges des satellites tournent plus vite que les horloges sur Terre",
+            "Le temps doit être corrigé à l'aide des équations de la relativité"
+        ],
+        "astro_title": "Astronomie moderne",
+        "astro_content": "La relativité générale a complètement changé notre compréhension de l'univers, des trous noirs à l'expansion de l'univers, et nous a permis de découvrir des phénomènes dont nous ignorions l'existence.",
+        "astro_discoveries": "Découvertes importantes:",
+        "astro_points": [
+            "Ondes gravitationnelles (2015)",
+            "Image du trou noir (2019)",
+            "Expansion accélérée de l'univers"
+        ],
+        "nuclear_title": "Énergie nucléaire",
+        "nuclear_content": "La célèbre équation d'Einstein E=mc² est à la base de la compréhension de l'énergie nucléaire, montrant que la masse peut être convertie en énergie et vice versa.",
+        "nuclear_apps": "Applications:",
+        "nuclear_points": [
+            "Centrales nucléaires",
+            "Armes nucléaires",
+            "Médecine nucléaire"
+        ],
+        "future_title": "Futur et technologie",
+        "future_content": "La relativité générale continue d'inspirer les innovations technologiques modernes, de la précision des horloges atomiques aux futurs moteurs à propulsion nucléaire.",
+        "future_apps": "Applications futures:",
+        "future_points": [
+            "Voyages spatiaux lointains",
+            "Communications quantiques",
+            "Centrales à fusion"
+        ]
+    }
+  }
+}
